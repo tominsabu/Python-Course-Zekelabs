@@ -123,10 +123,10 @@
 
 
 # 10.	What will be the output for :
-x = 'abcd'
-for i in range(len(x)):
-    x = 'a'
-    print(x)
+# x = 'abcd'
+# for i in range(len(x)):
+#     x = 'a'
+#     print(x)
 
 # Ans: four as	
 # i: 1 2 3 4
