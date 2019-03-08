@@ -11,21 +11,21 @@
 # >>> compare_date( [10,1993], [8,1998] )
 # -1
 
-# month1,year1=10,1995
-# month2,year2=8,1995
-# l1=[]
-# l2=[]
-# l1.append(month1)
-# l1.append(year1)
-# l2.append(month2)
-# l2.append(year2)
-# print(l1,l2)
-# if (l1[0]<=l2[0] and l1[1]<l2[1]) or (l1[0]<l2[0] and l1[1]==l2[1]):
-# 	print(-1)
-# elif l1[0]==l2[0] and l1[1]==l2[1]:
-# 	print(0)
-# else:
-# 	print(1)
+#Answer:
+
+# def compare_date(month1,year1,month2,year2):
+# 	l1=[month1,year1]
+# 	l2=[month2,year2]
+# 	print(l1,l2)
+# 	if (l1[0]<=l2[0] and l1[1]<l2[1]) or (l1[0]<l2[0] and l1[1]==l2[1]):
+# 		print(-1)
+# 	elif l1[0]==l2[0] and l1[1]==l2[1]:
+# 		print(0)
+# 	else:
+# 		print(1)
+# compare_date(12,1995,10,1995)
+
+#--------------------------------------------------------------------------------------------------------------
 
 
 
@@ -40,16 +40,16 @@
 # v = [ 7 ]
 # then the output of your code should be 7
 
-
+#Answer
 
 # v = [4,5,4,44,6,6,6,12,56]
 # max=0
 # sec_max=0
 # if len(v)==1:
 # 	print(v)
-# elif len(v)>1 and v==v[::-1]:     # if one condition in an elif is true, then if the next elif encounters...
-# 	print(v)                      # ...the same condition it is not considered, because it was ture for the initial
-# elif len(v)>1:                    #....elif.
+# elif len(v)>1 and v==v[::-1]:     
+# 	print(v)                       
+# elif len(v)>1:                    
 # 	for value in v:
 # 		if value > max:
 # 			sec_max=max
@@ -58,6 +58,7 @@
 # 			sec_max=value
 # 	print(sec_max,max)
 
+#-----------------------------------------------------------------------------------------------------------------
 
 
 # 3. Consider a data, where just the name of the restaurant, the type of restaurant, and the ratings are provided. 
@@ -68,18 +69,17 @@
 # In the above example, Acme would be printed in the output, but Flintstone and Bella Troy would not. 
 # Flintstone is not Italian and Bella Troy has a 1 rating. 
 
-
-
+#Answer
 
 # restaurants=[ [ 'Acme', 'Italian', 2, 4, 3,5],[ 'Flintstone', 'Steak', 5, 2, 4, 3, 3, 4],[ 'Bella Troy', 'Italian',1, 4, 5]] 
 # count1=0
-# while count1<=len(restaurants)-1:
+# while count1<len(restaurants):
 # 	if restaurants[count1][1]=='Italian':
 # 		if (not(1 in restaurants[count1][2:])) and (5 in restaurants[count1][2:]):
 # 			print(restaurants[count1][0])
 # 	count1+=1
 
-
+#----------------------------------------------------------------------------------------------------------------
 
 
 
@@ -100,22 +100,23 @@
 # should output the value 16 because there are 2 Bishops (3 points each), 1 Queen (9 points each), 
 # and 1 Pawn (1 point each).
 
+#Answer
 
-# s='BQBP'
-# l=[['P',1],['B',3],['K',3],['R',5],['Q',9]]
-# sum=0
-# for value1 in s:
-# 	count=0
-# 	while count<len(l):
-# 		if value1 in l[count][0]:
-# 			sum=sum+l[count][1]
-# 			break
-# 		count+=1
-# print(s)	
-# print(sum)
+# def chess_score(s):
+# 	l=[['P',1],['B',3],['K',3],['R',5],['Q',9]]
+# 	sum=0
+# 	for value1 in s:
+# 		count=0
+# 		while count<len(l):
+# 			if value1 in l[count][0]:
+# 				sum=sum+l[count][1]
+# 				break
+# 			count+=1
+# 	print(s)	
+# 	print(sum)
+# chess_score('BQBP')
 
-
-
+#-----------------------------------------------------------------------------------------------------------------
 
 
 
@@ -131,6 +132,7 @@
 # Then the output should be
 # 8, 17, 15
 
+#Answer
 
 # l1= [2,5,7]
 # l2= [3,6,10]
@@ -142,7 +144,7 @@
 # s='{},{},{}'.format(sum1,sum2,sum3)
 # print(s)
 
-
+#----------------------------------------------------------------------------------------------------------------
 
 
 # 6. Write Python code to generate the following ranges
@@ -151,6 +153,7 @@
 # (c) (3; 5; 7; 9; : : : ; 29)
 # (d) (-95;-90;-85; : : : ; 85; 90)
 
+#Answer
 
 # l1=[]
 # for value in range(0,101):
@@ -173,7 +176,7 @@
 # 	l1.append(value)
 # print(l1[l1.index(-95):l1.index(91):5])
 
-
+#-----------------------------------------------------------------------------------------------------------------
 
 
 
@@ -183,6 +186,8 @@
 # For example, the value of result should be 25 after the loop for both of the following lists:
 # v = [ 10, 12, 3, -5, 5, 6 ]
 # v = [ 0, 10, 3, 6, 5, 1 ]
+
+#Answer
 
 # v = [ 10, 12, 3, -5, 5, 6 ]
 # count=0
@@ -194,6 +199,9 @@
 # 	else:
 # 		break
 # print(result)
+
+#-----------------------------------------------------------------------------------------------------------------
+
 
 
 
@@ -213,7 +221,7 @@
 # then then output should be just
 # None
 
-
+#Answer
 
 # v = [ 17, -5, 15, -3, 12, -5, 0, 12, 22, -1 ]
 # l1=[]
@@ -226,6 +234,8 @@
 # 		print(value)
 # else:
 # 	print(None)
+
+#-----------------------------------------------------------------------------------------------------------------
 
 
 
@@ -241,10 +251,13 @@
 # print (slice1)
 # print (mylist)
 
+# Answer: 
 
-# Ans: none(sort() does not return a value)
+# none(sort() does not return a value)
 # [20,12]
 # [1,4,8,12,6]
+
+#-----------------------------------------------------------------------------------------------------------------
 
 
 
@@ -252,10 +265,16 @@
 # 10. Write a Python for loop to print out the values from the list v that are positive (0 is NOT a positive
 # number).
 
+#Answer
+
 # v = [ 17, -5, 15, -3, 12, -5, 0, 12, 22, -1 ]
 # for value in v:
 # 	if value>0:
 # 		print(value)
+
+#-----------------------------------------------------------------------------------------------------------------
+
+
 
 
 # 11. What is the output of the following program?
@@ -281,6 +300,16 @@
 # c += egg(a1, b2, a2, b1)
 # print (c)
 
+# Answer
+
+# 0
+# 1
+# 0
+# 1
+
+#-----------------------------------------------------------------------------------------------------------------
+
+
 
 
 # 12.Give the output of each of the following
@@ -289,8 +318,8 @@
 
 # i = 4
 # L = [ 0, 12, 3, 5, 2, -1 ]
-# while 0 <= i and i < len(L):          #The loop is executed till the condition is false. It doesn't iterate
-# 	if L[i] < 0:                        #...over the list L.
+# while 0 <= i and i < len(L):          
+# 	if L[i] < 0:                       
 # 		break
 # 	else:
 # 		i = L[i]
@@ -299,7 +328,11 @@
 
 # Ans:5 -1
 
+# Explanation
+# i    :2,3,5
+# L[i] :3,5,-1
 
+#-----------------------------------------
 
 # (b)
 
@@ -314,7 +347,12 @@
 # print (tough)
 
 
-# Ans: 3 2 3 (Got)
+# Answer: 
+
+# 3 2 3 (Got)
+
+#-----------------------------------------------------------------------------------------------------------------
+
 
 
 
@@ -334,8 +372,11 @@
 # 	if len(value)==8 and (value[0]==value[len(value)-1]):
 # 		print(value,len(value))
 
-# Ans: expedite 8	
+# Answer: 
 
+# expedite 8	
+
+#-----------------------------------------------------------------------------------------------------------------
 
 
 
@@ -349,41 +390,33 @@
 # 	x = max(v)
 # 	return x
 # v = [ 14, 19, 4, 5, 12, 8 ]
-# if len(v) > 10 and get_min(v) > 6:         #Tip: if you want to check more than one condition on the same value
-# 	print ("Hello")                          #use if again else use elif
+# if len(v) > 10 and get_min(v) > 6:         
+# 	print ("Hello")                         
 # 	print (v[0])
 # 	print (v[4])
 # else:
 # 	print ("So long")
 # 	print (v[0])
 # 	print (v[-1])
-# if len(v) < 10 or get_max(v):    #if get_max(v)  acts as a true condition as long as get_max not equal to 0
+# if len(v) < 10 or get_max(v):    
 # 	print (get_max(v))
 # 	print (v[0])
 # 	print (get_min(v))
 # 	print (v[0])
 
-#  Ans:So long,14,8,19,14,4,4
+#  Answer:
 
-# -------------------------------------------------------------------------------------------------------------
+# So long,14,8,19,14,4,4
 
-#USEFUL TIP if and while 
-
-# v=[0,2,5,3,6]
-# if 6:
-# 	print(v)
-# n=3
-# while n<6:
-# 	n+=1
-# 	print(v)
-
-# '-------------------------------------------------------------------------------------------------------------'
+# ----------------------------------------------------------------------------------------------------------------
 
 
 
 # 15. Write code that uses a range (and NO loops) to generate the following lists:
 # v0 = [ 10, 9, 8, 7, 6, 5, 4, 3 ]
 # v1 = [ -10, -3, 4, 11, 18, 25, 32, 39 ]
+
+# Answer
 
 # l=[]
 # for nums in range(3,11):
@@ -394,6 +427,10 @@
 # for nums in range(-10,40):
 # 	l.append(nums)
 # print(l[::7])
+
+# ----------------------------------------------------------------------------------------------------------------
+
+
 
 
 # 16. Consider the following list of lists of strings:
@@ -406,11 +443,19 @@
 # print (len(wordy))
 # print (len(wordy[1]))
 
+#Answer
+
+# Got
+
+# -------------------------------------------
+
 # (b) Write a loop to print the last word of each list in wordy, stopping when either an empty list is found
 # or when there are no more lists. For the above example, the output should be
 # jetta
 # zebra
 # 49er
+
+# Answer
 
 # count=0
 # while count<len(wordy):
@@ -420,6 +465,8 @@
 # 		break
 # 	count+=1
     
+# ----------------------------------------------------------------------------------------------------------------
+
 
 
 
@@ -431,18 +478,18 @@
 # v = [ 1, 8, [12, 8], 'hello', 'car' ]
 # x = 'salad'
 # if len(v[2]) >= 2:
-# 	if x > v[3]:       #since ord('s') is greater than ord('h') this condition is true,...
-# 		print ('One')  #...this way comparison is possible between strings only
+# 	if x > v[3]:       
+# 		print ('One')  
 # 	if v[0] == 1:      
 # 		print ('Three')
 # 	else:
 # 		print ('Two')
-# elif len(v) == 5:       #elif is an else with a condition
+# elif len(v) == 5:      
 # 	print ('Six')
 # else:
 # 	v.append('five')
-# 	print ('Ten')
-		
+# 	print ('Ten')		
+
 # remove_something(v)
 # print (v[1])
 # print (v[2])
@@ -450,49 +497,13 @@
 # print (len(v))
 # print(v)
 
+# Answer
 
+# Got
 
-#------------------------------------------------------------------------------------------------------------
-#TIPS
-
-
-# v = [ 1, 2, [12, 8], 'hello', 'car' ]
-# v.remove( v[v[v[0]]] )
-# print(v)
-
-# def add(y):
-# 	r=y[0]+y[1]
-# 	return r
-# t=[10,20,30,40,50,60,70,80,90]
-# print(add(t))
-
-
-
-# v = [ 1, 8, [12, 8], 'yello', 'car' ]
-# x = 'salad'
-# if len(v[2]) >= 2:
-# 	if x > v[3]:        
-# 		print ('One')
-# 	if v[0] == 1:
-# 		print ('Three')
-# 	else:
-# 			print ('Two')
-# elif len(v) == 5:
-# 	print ('Six')
-# else:
-# 	v.append('five')
-# 	print ('Ten')
-
-
-
-# a='abcdef'
-# b='ag'                     #char 'a' is common firt char in both, then ''>'' compares the next chars i.e, b and g...
-# print(ord('b'),ord('g'))   #... ord(b)=98 and ord(g)=103. therfore ag is greater than abcdef in python dictionary
-# if a>b:
-# 	print('true')
-# else:
-# 	print('false')
 #-----------------------------------------------------------------------------------------------------------------
+
+
 
 
 # 18. You are given in variable x a list of lists represented as an NxN grid in which
@@ -506,6 +517,8 @@
 # 2 1 | 4 2
 # 2 1 | 4 5
 
+#Answer
+
 # x = [[1,2,3,4],[4,3,2,1],[2,1,4,2],[2,1,4,5]]
 # s='''
 # {}  {} | {}  {}
@@ -515,20 +528,7 @@
 # {}  {} | {}  {}'''.format(x[0][0],x[0][1],x[0][2],x[0][3],x[1][0],x[1][1],x[1][2],x[1][3],x[2][0],x[2][1],x[2][2],x[2][3],x[3][0],x[3][1],x[3][2],x[3][3])
 # print(s)
 
-
 #----------------------------------------------------------------------------------------------------------------
-# TIPS WITH while
-# l1=[]
-# count=0
-# while count<len(x):
-# 	count1=0
-# 	while count1 < len(x[count]):
-# 		l1.append((x[count][count1]))
-# 		count1+=1
-# 	count+=1
-# print(l1)
-#-----------------------------------------------------------------------------------------------------------------
-
 
 
 
@@ -543,6 +543,7 @@
 # If there is no value in which a2 is better, then you should print:
 # a2 is never better
 
+# Answer
 
 # a1 = [11,8,11,9]
 # a2 = [11,9,18,12]
@@ -565,19 +566,24 @@
 # if len(l3)==len(a1):
 # 	print('a2 is never better')
 
+# ----------------------------------------------------------------------------------------------------------------
+
 
 
 
 # 20. What is the output from the following code:
+
 # L1 = ['cat', 'dog', 'hawk', 'tiger', 'parrot']
-# print (L1[1:-1])
-# print (L1[1:-2])
-# print (L1[1:-4])
-# print (L1[1:0]) 
-# print (L1[1:10])
-# print (L1[::-1])
-# print (L1[1:4:2])
-# print (L1[::-2])
+# print (L1[1:-1])        #Ans: ['dog', 'hawk', 'tiger']
+# print (L1[1:-2])        #Ans: ['dog', 'hawk']
+# print (L1[1:-4])        #Ans: []
+# print (L1[1:0])         #Ans: []    contradicts with the direction sense
+# print (L1[1:10])        #Ans: ['dog', 'hawk', 'tiger', 'parrot']
+# print (L1[::-1])        #Ans: ['parrot', 'tiger', 'hawk', 'dog', 'cat']
+# print (L1[1:4:2])       #Ans: ['dog', 'tiger']
+# print (L1[::-2])        #Ans: ['parrot', 'hawk', 'cat']
+
+# ----------------------------------------------------------------------------------------------------------------
 
 
 
