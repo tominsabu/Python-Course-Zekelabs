@@ -1,1 +1,1 @@
-# My Python-Course at Zekelabs
+# Assignments submitted during the python course at Zekelabs
